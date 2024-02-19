@@ -1,0 +1,579 @@
+@font-face{
+    font-family: Font1;
+    src: url(font/FraktionMono-Regular.ttf);
+}
+
+@font-face{
+    font-family: Font2;
+    src: url(font/kesslersuperdisplayweb-regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background-color: aquamarine; */
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 40%;
+    height: 110vh;
+    background-color: rgb(0, 0, 0); 
+}
+
+@media(max-width: 480px){
+    .t-center h1{
+        line-height: 2px;
+    }
+}
+
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2caca;
+    padding: 0.5vw 1.2vw;
+    border-radius: 50px;
+    font-size: 0.8vw;
+    font-family: Font1;
+    transition: all cubic-bezier(0.19,1,0.22,1)1s;
+    cursor: crosshair;
+}
+
+#lft-btn h3 {
+    color: rgb(23, 182, 142);
+}
+
+#rght-btn h3 {
+    color: rgb(23, 182, 142);
+}
+
+@media(max-width: 800px){
+    .btn{
+        font-size: 2vw;
+    }
+}
+
+@media(max-width: 810px){
+    #rght-btn{
+        font-size: 2.4vw;
+        text-align: center;
+    }
+    #lft-btn{
+        font-size: 2.4vw;
+        text-align: center;
+    }
+}
+
+@media(max-width: 480px){
+    .btn{
+        font-size: 2.8vw;
+    }
+}
+
+@media(max-width: 401px){
+    .btn{
+        font-size: 2.9vw;
+        text-align: center;
+    }
+    .about{
+        font-size: 15vw;
+    }
+}
+
+@media(max-width: 1375px){
+    .btn{
+        font-size: 1.3vw;
+        text-align: center;
+    }
+    #about-btn{
+        font-size: 5vw;
+    }
+}
+
+.t-center{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    /* background-color: rebeccapurple; */
+}
+
+.b-center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    /* background-color: rgb(185, 179, 191); */
+}
+
+.center h1{
+    font-family: font2;
+    font-size: 8vw;
+    line-height: 15vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+@media(max-width: 480px){
+    .center h1{
+        font-size: 8.7vw;
+        line-height: 7vh;
+    }
+    #lft-btn {
+        margin-left: 8px;
+        justify-content: center;
+    }
+    #about-btn {
+        margin-left: 8px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 400px){
+    .center h1{
+        font-size: 8.7vw;
+        line-height: 3vh;
+    }
+}
+
+
+@media(max-width: 1375px){
+    .center h1{
+        font-size: 8.7vw;
+        line-height: 9.5vh;
+    }
+    #lft-btn {
+        margin-left: 8px;
+        justify-content: center;
+    }
+    #about-btn {
+        margin-left: 8px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1500px){
+    .center h1{
+        font-size: 8.7vw;
+        line-height: 9.5vh;
+    }
+    #lft-btn {
+        margin-left: 8px;
+        justify-content: center;
+    }
+    #about-btn {
+        margin-left: 8px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 400px){
+    .center h1{
+        font-size: 8.7vw;
+        line-height: 5.5vh;
+    }
+    #lft-btn {
+        font-size: 2.8vw;
+    }
+    #rght-btn {
+        font-size: 2.8vw;
+    }
+}
+
+.c-center-one {
+    width: 100%;
+    height: 0vh;
+    /* background-color: blue; */
+    transition: all cubic-bezier(0.19,1,0.22,1)1s;
+}
+
+.c-center-two {
+    width: 100%;
+    height: 0vh;
+    background-color: #242427; 
+    transition: all cubic-bezier(0.19,1,0.22,1)1.5s;
+}
+
+.c-center-two h2{
+    text-align: center;
+    color: rgb(224, 224, 222);
+    margin-top: 10px;
+    opacity: 0;
+    transition: all cubic-bezier(0.19,1,0.22,1)1.5s;
+}
+
+.img-all{
+    position: absolute;
+    pointer-events: none;
+    transition: all cubic-bezier(0.19,1,0.22,1)1s;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-one{
+    width: 25vw;
+    height: 25vw;
+    background-color: #333;
+    bottom: 60%;
+    right: 50%;
+    opacity: 0;
+    /* filter: blur(10px); */
+}
+
+.img-two{
+    width: 15vw;
+    height: 17vw;
+    background-color: #333;
+    top: 45%;
+    left: 40%;
+    opacity: 0;
+}
+
+.img-three{
+    top: 39%;
+    left: 30%;
+    width: 15vw;
+    height: 17vh;
+    opacity: 0;
+}
+
+.img-four{
+    top: 40%;
+    right: 35%;
+    width: 20vw;
+    height: 22vh;
+    opacity: 0;
+}
+
+.img-five{
+    top: 15%;
+    right: 25%;
+    width: 25vw;
+    height: 25vh;
+    opacity: 0;
+}
+
+
+#one{
+    z-index: 1;
+    background-image: url(https://images.unsplash.com/photo-1492377908089-78a79356028f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); 
+}
+
+#two{
+    z-index: 1;
+    background-image: url(https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); 
+}
+
+#three{
+    z-index: 1;
+    background-image: url(https://images.unsplash.com/photo-1576416066728-3a83469793b4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+#four{
+    z-index: 1;
+    background-image: url(https://i0.wp.com/sinusoidalmusic.com/wp-content/uploads/2023/06/BMTH_JF_4410.jpg?resize=819%2C1024&ssl=1);
+}
+
+#five{
+    z-index: 1;
+    background-image: url(https://cms.kerrang.com/images/Bring-Me-The-Horizon-Download-Festival-2023-credit-Jenn-Five-6.jpg);
+}
+
+#six{
+    z-index: 1;
+    background-image: url(https://i0.wp.com/sinusoidalmusic.com/wp-content/uploads/2023/06/BMTH_JF_4410.jpg?resize=819%2C1024&ssl=1);
+}
+
+#seven{
+    z-index: 1;
+    background-image: url(https://i0.wp.com/sinusoidalmusic.com/wp-content/uploads/2023/06/BMTH_JF_4410.jpg?resize=819%2C1024&ssl=1);
+}
+
+#eight{
+    z-index: 1;
+    background-image: url(https://i0.wp.com/sinusoidalmusic.com/wp-content/uploads/2023/06/BMTH_JF_4410.jpg?resize=819%2C1024&ssl=1);
+}
+
+.container {
+    align-items: center;
+    width: 100%;
+    height: 0vh;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(6, 23, 36, 0);
+    transition: all cubic-bezier(0.19,1,0.22,1)1.5s;
+    opacity: 1;
+    border-radius: 15px;
+}
+
+.container h2{
+    margin-top: 10px;
+    color: rgb(54, 95, 98);
+    text-align: center;
+    text-decoration: overline;
+}
+
+.container p{
+    margin-top: 10px;
+    color: rgb(223, 219, 222);
+    text-align: center;
+}
+
+#about-btn {
+    color: rgb(23, 182, 142);
+    margin-top: -55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2caca;
+    padding: 0.5vw;
+    border-radius: 50px;
+    font-size: 0.8vw;
+    font-family: Font1;
+    transition: all cubic-bezier(0.19,1,0.22,1)1s;
+    cursor: crosshair;
+}
+
+.tab-titles {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  
+  .tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: rgb(23, 182, 142) !important;
+    font-family: Font2;
+    font-weight: bold;
+  }
+  @media(max-width: 420px){
+    .tab-links{
+        font-size: 3.5vw;
+        justify-content: center;
+    }
+}
+@media(max-width: 331px){
+    .tab-links{
+        font-size: 3.1vw;
+        justify-content: center;
+    }
+}
+@media(max-width: 280px){
+    .tab-links{
+        font-size: 2.8vw;
+        justify-content: center;
+    }
+}
+
+  
+  .tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(54, 95, 98);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+  }
+  
+  .tab-links.active-link::after {
+    width: 50%;
+  }
+  
+  .tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+  }
+  
+.tab-contents ul li span {
+    font-size: 1.5vw;
+    color: rgb(54, 95, 98);
+    font-weight: bold;
+  }
+  
+  .tab-contents {
+    display: none;
+  }
+  
+  .tab-contents.active-tab {
+    display: block;
+  }
+  @media(max-width: 875px){
+    .tab-contents ul li span{
+        font-size: 2.8vw;
+        justify-content: center;
+    }
+}
+@media(max-width: 480px){
+    .tab-contents ul li span{
+        font-size: 4vw;
+        justify-content: center;
+    }
+}
+@media(max-width: 360px){
+    .tab-contents ul li span{
+        font-size: 3.9vw;
+        justify-content: center;
+    }
+}
+
+.tabs-center {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#skills {
+    justify-content: center;
+    color: rgb(54, 95, 98);
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    height: 40px;
+}
+
+th {
+    font-size: 19px;
+    border-bottom: 1px solid rgba(88, 22, 22, 0.425)
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#news-h1{
+    font-size: 35px;
+    margin-top: 0;
+}
+
+#news-h2{
+    margin-top: 0;
+}
+
+#news-h3{
+    color: wheat;
+    margin-top: 10px;
+}
+
+#price {
+    color: rgb(99, 35, 35);
+}
+
+.about-box {
+    width: 50%;
+    height: 0vh;
+    background-color: rgba(0, 0, 0, 0.901);
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    color: wheat;
+}
+
+.center .about-box{
+    margin: 0 auto;
+}
+
+.container svg {
+    display: flex; /* Általánosan ajánlott, hogy az SVG elemek blokk elemek legyenek */
+    fill: rgb(210, 210, 210); /* SVG töltése */
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.img-oli{
+    width: 20vw;
+    height: 20vw;
+    background-color: #333;
+    bottom: 10%;
+    left: 15%;
+    opacity: 0;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    /* filter: blur(10px); */
+}
+
+.img-jordan{
+    width: 20vw;
+    height: 20vw;
+    background-color: #333;
+    bottom: 10%;
+    left: 40%;
+    opacity: 0;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    /* filter: blur(10px); */
+}
+
+.img-jona{
+    width: 20vw;
+    height: 20vw;
+    background-color: #333;
+    bottom: 10%;
+    left: 65%;
+    opacity: 0;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    /* filter: blur(10px); */
+}
+
+
+
+#oliver{
+    z-index: 1;
+    background-image: url(https://nationaltoday.com/wp-content/uploads/2022/10/456840829-min-1200x834.jpg.webp);
+}
+
+#jordan{
+    z-index: 1;
+    background-image: url(https://cms.kerrang.com/images/JordanFishBMTH-JonathanWeiner-2019.jpg);
+}
+
+#jona{
+    z-index: 1;
+    background-image: url(https://i.pinimg.com/originals/28/e4/87/28e4878bc5d95ef96bc0a2587d22642e.jpg);
+}
